@@ -1,0 +1,28 @@
+# Never commit credentials, bills, tariff or meter data
+*.env
+.env*
+*api*key*
+*API*key*
+*apikey*
+*secret*
+*token*
+*.pem
+octopus_*.csv
+*bill*
+*ledger*
+*halfhour*
+*half_hour*
+*.xlsx
+
+# Python
+__pycache__/
+*.pyc
+*.pkl
+.venv/
+venv/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
