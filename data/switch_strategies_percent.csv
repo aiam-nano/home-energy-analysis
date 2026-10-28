@@ -1,0 +1,6 @@
+strategy,cost_vs_actual_pct,difference_pct
+Cosy all year,116.1,16.1
+Intelligent Go all year,94.8,-5.2
+"Your switch dates (23 Oct, 5 Apr)",100.0,0.0
+"Best dates in hindsight (22 Nov, 10 Feb)",92.2,-7.8
+"Best dates chosen from weather model (18 Nov, 8 Feb)",92.4,-7.6

@@ -48,9 +48,17 @@ line('days, dates', f"{len(a)}, {a.date.min()} to {a.date.max()}")
 line('home consumption mean, sd (kWh/day)', f'{a.home_consumption_kwh.mean():.2f}, {a.home_consumption_kwh.std():.2f}')
 line('generated, exported, imported, consumed (kWh)', f'{a.solar_generated_kwh.sum():,.0f}, {a.grid_export_kwh.sum():,.0f}, {a.grid_import_kwh.sum():,.0f}, {a.home_consumption_kwh.sum():,.0f}')
 
-print('\n--- Powerwall daily cycle window, 25 May to 15 Sep ---')
-w = (d.date >= '2026-05-25') & (d.date <= '2026-09-15')
+print('\n--- Powerwall daily cycle window, 5 April to 17 September 2026 ---')
+# Octopus half-hourly export shows the nightly discharge: an evening export on 5-6 April, then a
+# 23:30-00:30 dump from 12 April to 17 September. 5 April is also the day the house moved to Intelligent Go.
+START, END = '2026-04-05', '2026-09-17'
+w = (d.date >= START) & (d.date <= END)
+line('days in window', f'{w.sum()}')
 line('Powerwall export estimate: year, in window, before, after (kWh)',
-     f"{d.powerwall_export_est.sum():,.0f}, {d[w].powerwall_export_est.sum():,.0f}, {d[d.date < '2026-05-25'].powerwall_export_est.sum():,.0f}, {d[d.date > '2026-09-15'].powerwall_export_est.sum():,.0f}")
-line('import in window: mean, 10th and 90th percentile (kWh/day)',
-     f"{d[w].grid_import_kwh.mean():.1f}, {d[w].grid_import_kwh.quantile(.1):.1f}, {d[w].grid_import_kwh.quantile(.9):.1f}")
+     f"{d.powerwall_export_est.sum():,.0f}, {d[w].powerwall_export_est.sum():,.0f}, {d[d.date < START].powerwall_export_est.sum():,.0f}, {d[d.date > END].powerwall_export_est.sum():,.0f}")
+line('days above 1 kWh, mean per day, mean on those days (kWh)',
+     f"{(d[w].powerwall_export_est > 1).sum()}, {d[w].powerwall_export_est.mean():.1f}, {d[w][d[w].powerwall_export_est > 1].powerwall_export_est.mean():.1f}")
+line('import in window: mean, median, 10th and 90th percentile (kWh/day)',
+     f"{d[w].grid_import_kwh.mean():.1f}, {d[w].grid_import_kwh.median():.1f}, {d[w].grid_import_kwh.quantile(.1):.1f}, {d[w].grid_import_kwh.quantile(.9):.1f}")
+m = d[w].assign(month=d[w].date.astype(str).str[:7]).groupby('month')
+print(m.agg(days=('date', 'size'), pw_export=('powerwall_export_est', 'sum'), mean_import=('grid_import_kwh', 'mean'), sd_import=('grid_import_kwh', 'std')).round(1).to_string())

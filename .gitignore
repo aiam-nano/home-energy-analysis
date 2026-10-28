@@ -26,3 +26,9 @@ venv/
 Thumbs.db
 .vscode/
 .idea/
+
+# switching-model cache (daily simulated costs)
+switch_model/cache/
+
+# Private pound-denominated results
+*PRIVATE*

@@ -1,0 +1,4 @@
+tariff,slot_profile_corr,daily_import_metered,daily_import_planner,cheap_share_metered,cheap_share_planner
+cosy,0.899,50.507,51.859,0.889,0.918
+iog,0.617,21.254,22.722,0.956,0.994
+per-day cheap-share correlation,0.455,,,,

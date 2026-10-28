@@ -1,0 +1,5 @@
+scenario,cosy_car_cost_above_cheapest_pct_of_base,cosy_days_overflow,cosy_kwh_outside_cheap_window,cosy_kwh_delivered,iog_car_cost_above_cheapest_pct_of_base,iog_days_overflow,iog_kwh_outside_cheap_window,iog_kwh_delivered,d_saving_pct
+any slot 7.4 kW,0.0,0,0.0,2164.3,0.0,0,1.7,2164.3,-0.0
+any slot 3.6 kW,3.0,0,254.0,2164.3,10.9,0,512.8,2164.3,-7.9
+"plugged in 22:00-07:00, 7.4 kW",0.7,0,59.4,2164.3,0.0,0,1.7,2164.3,0.7
+"plugged in 22:00-07:00, 3.6 kW",6.5,24,539.3,2164.3,10.9,24,512.8,2164.3,-4.4

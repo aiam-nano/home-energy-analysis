@@ -1,0 +1,41 @@
+group,variant,cosy_pct,go_pct,saving_pct,d_saving_pct,day_MAE_pct,sign7,corr7,switch_dates,regret_pct
+N naive,NAIVE: reprice the metered half-hourly import (comparison-site method),155.2,146.2,9.0,-12.3,88.5,0.77,0.52,24 Oct / 06 Apr,7.8
+reference,"reference (actual load, solar, car; 12 kWh; shape 80/20)",116.1,94.8,21.3,0.0,0.0,1.0,1.0,22 Nov / 10 Feb,0.0
+A weather chain,"weather-predicted load and solar, actual car",112.6,89.3,23.3,2.0,7.1,0.96,0.97,14 Nov / 06 Feb,0.2
+A weather chain,"weather-predicted load and solar, mean car (the weather chain)",112.4,89.5,23.0,1.7,18.1,0.94,0.9,18 Nov / 08 Feb,0.2
+A weather chain,"weather-predicted, load x0.8",74.9,47.8,27.2,5.9,19.5,0.83,0.83,28 Feb / 01 Feb,2.3
+A weather chain,"weather-predicted, load x1.2",153.5,133.0,20.4,-0.9,18.7,0.96,0.88,14 Nov / 21 Feb,0.2
+A weather chain,"weather-predicted, solar x0.8",132.7,112.1,20.5,-0.7,18.0,0.94,0.88,14 Nov / 21 Feb,0.2
+A weather chain,"weather-predicted, solar x1.2",92.5,67.6,25.0,3.7,18.8,0.93,0.89,15 Dec / 08 Feb,0.7
+B averages only,"no weather: monthly-mean load, solar and car",113.0,90.0,23.0,1.7,19.0,0.91,0.86,01 Dec / 01 Mar,1.1
+B averages only,monthly-mean load only (actual solar),114.0,93.0,21.1,-0.2,6.3,0.95,0.95,22 Nov / 14 Feb,0.0
+B averages only,monthly-mean solar only (actual load),115.3,91.8,23.5,2.2,7.4,0.97,0.95,16 Nov / 05 Feb,0.3
+B averages only,constant annual-mean load (actual solar),100.6,66.4,34.2,12.9,15.5,0.78,0.82,28 Feb / 01 Feb,2.3
+C load shape,load shape fully flat,114.4,91.2,23.3,2.0,2.0,0.97,1.0,22 Nov / 10 Feb,0.0
+C load shape,load shape 50/50,119.2,100.3,18.9,-2.4,2.4,0.98,1.0,14 Nov / 14 Feb,0.0
+C load shape,load shape fully typical-profile (0/100),126.3,109.8,16.5,-4.8,4.8,0.97,0.99,14 Nov / 14 Feb,0.0
+D battery,battery 0 kWh (no battery),196.5,157.9,38.6,17.4,39.3,0.73,-0.32,28 Feb / 01 Feb,2.3
+D battery,battery 6 kWh,138.0,116.6,21.4,0.1,13.2,0.82,0.68,26 Feb / 02 Feb,2.2
+D battery,battery 8.4 kWh (-30%),125.8,107.2,18.5,-2.7,6.5,0.94,0.96,22 Nov / 10 Feb,0.0
+D battery,battery 15.6 kWh (+30%),111.9,83.2,28.7,7.4,7.4,0.88,0.96,28 Feb / 10 Feb,1.9
+D battery,battery 20 kWh,111.2,70.4,40.8,19.5,19.5,0.78,0.7,28 Feb / 01 Feb,2.3
+D battery,battery power 2.5 kW,132.5,94.8,37.7,16.5,16.5,0.78,0.25,28 Feb / 01 Feb,2.3
+D battery,battery one-way efficiency 90% (instead of 95%),126.1,100.2,25.9,4.6,5.6,0.86,0.96,26 Feb / 05 Feb,2.0
+D battery,battery may charge from the grid in any slot (no window rule),116.1,94.8,21.3,-0.0,0.0,1.0,1.0,22 Nov / 10 Feb,0.0
+D2 export price,export rate 6 p/kWh (instead of 12),133.1,121.9,11.2,-10.0,10.0,1.0,0.92,22 Nov / 10 Feb,0.0
+D2 export price,export rate 15 p/kWh (instead of 12),103.0,78.7,24.3,3.0,3.2,1.0,0.99,22 Nov / 10 Feb,0.0
+D3 grid export,"import-or-export per half hour (solar-only export, as the default otherwise)",116.1,94.8,21.2,-0.0,0.0,1.0,1.0,22 Nov / 10 Feb,0.0
+D3 grid export,battery may export energy bought from the grid (12 p flat export),116.1,88.9,27.2,5.9,5.9,0.95,1.0,22 Nov / 10 Feb,0.0
+D3 grid export,"battery may export grid-bought energy, export 15 p",102.1,67.4,34.7,13.5,13.5,0.91,0.98,26 Feb / 10 Feb,1.8
+D3 grid export,"battery may export grid-bought energy, efficiency 90%",126.1,96.7,29.4,8.1,8.1,0.83,0.97,28 Feb / 05 Feb,2.0
+E car and solar,no car,90.4,81.1,9.3,-11.9,11.9,0.95,0.9,14 Nov / 21 Feb,0.2
+E car and solar,mean car (constant),115.9,94.9,20.9,-0.3,16.5,0.96,0.92,22 Nov / 21 Feb,0.2
+E car and solar,no solar (panels ignored),222.7,233.9,-11.2,-32.5,33.3,0.51,0.42,02 Nov / 25 Jun,13.2
+E car and solar,car left inside home load (not separated),123.3,116.6,6.7,-14.6,14.6,0.9,0.8,11 Nov / 21 Feb,0.7
+E car and solar,"car left inside home load, 50/50 shape",127.3,123.9,3.4,-17.9,17.9,0.88,0.78,11 Nov / 03 Mar,1.5
+F meter-only,"meter-only: solar x0.8, load adjusted to keep net",115.2,98.1,17.1,-4.2,4.3,0.98,1.0,14 Nov / 14 Feb,0.0
+F meter-only,"meter-only: solar x1.2, load adjusted to keep net",117.6,92.6,24.9,3.7,3.8,0.97,1.0,22 Nov / 10 Feb,0.0
+F meter-only,"meter-only: solar from weather model, net kept",116.3,94.8,21.4,0.2,4.3,0.99,0.99,14 Nov / 14 Feb,0.0
+G EV limits,"EV 3.6 kW charger, any slot",119.0,105.7,13.4,-7.9,7.9,0.99,0.93,14 Nov / 14 Feb,0.0
+G EV limits,"EV 7.4 kW, plugged in 22:00-07:00 only",116.7,94.8,21.9,0.7,0.7,1.0,1.0,22 Nov / 10 Feb,0.0
+G EV limits,"EV 3.6 kW, plugged in 22:00-07:00 only",122.5,105.7,16.9,-4.4,5.7,0.98,0.94,14 Nov / 10 Feb,0.0

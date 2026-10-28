@@ -1,0 +1,5 @@
+variant,cosy_pct,go_pct,saving_pct,d_saving_pct,day_MAE_pct,sign7,corr7,switch_dates,regret_pct,base_C,load_MAE_kwh_at_home_days
+"chain as published: hinge on mean temperature, all 365 days, base 12-19 C",112.45,89.49,22.96,1.7,18.13,0.94,0.9,18 Nov / 08 Feb,0.22,13.5,5.76
+"hinge on mean temperature, at-home days only",116.29,92.73,23.57,2.31,18.49,0.94,0.89,18 Nov / 08 Feb,0.22,12.5,5.54
+"hinge on mean temperature, at-home days only, single term (no sunshine, range)",115.92,92.09,23.83,2.57,18.72,0.94,0.89,18 Nov / 08 Feb,0.22,12.75,5.65
+"degreedays.net station HDD, at-home days only",116.27,91.83,24.44,3.18,18.81,0.93,0.89,14 Dec / 08 Feb,0.64,13.0,5.81

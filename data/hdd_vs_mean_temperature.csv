@@ -1,0 +1,9 @@
+representation,extras,best_base_C,n_days,R2,RMSE_kwh,slope_kwh_per_degC,CV_RMSE_kwh
+"Tmean, linear (no hinge)",single term,,338,0.681,9.684,-2.715,9.771
+Tmean hinge,single term,12.75,338,0.804,7.598,4.225,7.672
+HDD from Open-Meteo max/min,single term,12.5,338,0.8,7.681,4.461,7.733
+HDD degreedays.net (station),single term,14.0,338,0.78,8.053,4.067,8.12
+Tmean hinge,+ sunshine and range,12.5,338,0.809,7.493,4.387,7.628
+HDD from Open-Meteo max/min,+ sunshine and range,12.5,338,0.81,7.481,4.493,7.588
+HDD degreedays.net (station),+ sunshine and range,13.0,338,0.804,7.592,4.696,7.716
+"Tmean, two slopes (break at 12.75 C)",single term,12.75,338,0.804,7.597,4.25,
